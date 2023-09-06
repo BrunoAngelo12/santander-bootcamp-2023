@@ -5,6 +5,6 @@ public class AboutMe {
         String idade = args[2];
         String altura = args[3];
 
-        System.out.println("Olá, me chamo " + nome + " " + sobrenome +  " tenho " + idade + " anos e " + altura + "de altura");
+        System.out.println("Olá, me chamo " + nome + " " + sobrenome +  " tenho " + idade + " anos e " + altura + " de altura");
     }
 }
