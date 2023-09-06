@@ -1,11 +1,15 @@
-public class SmartTv{
+/**Exercicio TvSmart
+     * @autor Bruno
+     */
+public class SmartTv{    
     Boolean ligada = false;
     Integer canal = 1;
     Integer volume = 25;
 
+
     public SmartTv(){
     }
-
+    /** Este método é para ligar a tv */
     public void ligarTv(){
         this.ligada = true;
     }
