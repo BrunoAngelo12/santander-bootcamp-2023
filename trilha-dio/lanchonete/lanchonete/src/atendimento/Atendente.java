@@ -2,16 +2,16 @@ package atendimento;
 
 public class Atendente {
     private void passarPedido(){
-        System.out.println("Pedido novo!!");
+        System.out.println("Atendente para cozinha: Pedido novo!!");
     }
 
     public void agradecerPedido(){
         passarPedido();
-        System.out.println("Obrigado pelo pedido senhor!");
+        System.out.println("Atendente: Obrigado pelo pedido senhor!");
     }
 
     public void entregarPedido(){
-        System.out.println("O pedido está pronto, aqui está !");
+        System.out.println("Atendente: O pedido está pronto, aqui está !");
     }
 
 }
