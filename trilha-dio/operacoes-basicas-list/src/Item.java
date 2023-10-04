@@ -36,11 +36,17 @@ public class Item {
         CarrinhoDeCompras lista = new CarrinhoDeCompras();
         System.out.println("total de elementos: " + lista.obterNumeroDeItensDoCarrinho());
 
-        Item salgadin = new Item("Salgadin", 1.50, 1);
+        Item salgadin = new Item("Salgadinho", 1.50, 2);
         lista.adicionarItem(salgadin);
         System.out.println("total de elementos: " + lista.obterNumeroDeItensDoCarrinho());
-        lista.removerItem(salgadin);
+        Item salgadin2 = new Item("Salgadinho de queijo", 2.50, 1);
+        lista.adicionarItem(salgadin2);
         System.out.println("total de elementos: " + lista.obterNumeroDeItensDoCarrinho());
+        //lista.removerItem("Salgadinho");
+        //System.out.println("total de elementos: " + lista.obterNumeroDeItensDoCarrinho());
+        System.out.printf("Valor total do carrinho: R$ %.2f", lista.calcularValorTotal());
+        System.out.println();
+        lista.exibirItens();
     }
 
 }

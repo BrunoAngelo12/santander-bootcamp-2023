@@ -16,13 +16,31 @@ public class CarrinhoDeCompras {
         carrinho.add(item);
     }
 
-    public void removerItem(Item item){
-        String descricao = item.getNome();
-        for(Item x : carrinho){
-            if (x.getNome() == descricao){
-                carrinho.remove(item);
+    public void removerItem(String nome){
+        List<Item> itensParaRemover = new ArrayList<>();//criado uma lista com os itens para serem removidos atraves do metodo removeAll que remove com base em outra coleção
+        for(Item c : carrinho){//for each para percorrer todo o carrinho de compras
+            if(c.getNome().equalsIgnoreCase(nome)){//comparando para ver se tem os nomes são iguais
+                itensParaRemover.add(c);//caso o nome do item que queremos remover seja igual ao item da lista, é adicionado na lista dos itens que serão removidos
             }
         }
+        carrinho.removeAll(itensParaRemover);
+    }
+
+    public double calcularValorTotal(){
+        double valorTotalDoCarrinho = 0.0;
+        double calculo = 0.0;
+        for(Item c : carrinho){
+            calculo = c.getPreço() * c.getQuantidade();
+            valorTotalDoCarrinho += calculo;
+        }
+        return valorTotalDoCarrinho;
+    }
+
+    public void exibirItens(){
+       System.out.println("- Lista do Carrinho -");
+        for (Item c : carrinho){
+            System.out.printf("Produto: %s, Preço: R$%.2f, Quantidade: %d \n", c.getNome(), c.getPreço(), c.getQuantidade());
+       }
     }
 
 }
