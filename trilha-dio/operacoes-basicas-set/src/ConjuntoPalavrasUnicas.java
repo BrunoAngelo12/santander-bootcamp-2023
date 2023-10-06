@@ -30,4 +30,17 @@ public class ConjuntoPalavrasUnicas {
         System.out.println(colecaoPalavrasUnicas);
     }
 
-}
+    public static void main(String[] args) {
+            ConjuntoPalavrasUnicas set = new ConjuntoPalavrasUnicas();
+            set.adicionarPalavra("Nobru");
+            set.adicionarPalavra("Bruno");
+            set.adicionarPalavra("Sandy");
+            set.adicionarPalavra("Shelda");
+
+            set.exibirPalavrasUnicas();
+            set.removerPalavra("Bruno");
+            set.exibirPalavrasUnicas();
+            System.out.println(set.verificarPalavra("Sandy"));
+        }
+    }
+    
