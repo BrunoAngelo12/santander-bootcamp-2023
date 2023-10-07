@@ -1,5 +1,23 @@
-public class App {
-    public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+public class Tarefa {
+    private String descricao;
+    private Boolean tarefaCompleta;
+
+    public Tarefa(String descricao){
+        this.descricao = descricao;
+        this.tarefaCompleta = false;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public Boolean getTarefaCompleta() {
+        return tarefaCompleta;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + descricao + ", " + tarefaCompleta + "}";
+    }
+
 }
