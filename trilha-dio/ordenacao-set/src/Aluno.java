@@ -1,4 +1,4 @@
-public class Aluno {
+public class Aluno implements Comparable<Aluno>{
     private String aluno;
     private Long matricula;
     private Double nota;
@@ -49,6 +49,11 @@ public class Aluno {
         } else if (!matricula.equals(other.matricula))
             return false;
         return true;
+    }
+
+    @Override
+    public int compareTo(Aluno a) {
+        return aluno.compareToIgnoreCase(a.getAluno());
     }
 
     

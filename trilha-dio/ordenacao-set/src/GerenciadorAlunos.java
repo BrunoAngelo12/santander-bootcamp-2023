@@ -50,18 +50,20 @@ public class GerenciadorAlunos implements Comparable{
 
     public static void main(String[] args) {
         GerenciadorAlunos listaAluno = new GerenciadorAlunos();
-        listaAluno.adicionarAluno("Bruno", 123L, 5.0);
+        listaAluno.adicionarAluno("aBruno", 123L, 5.0);
         listaAluno.adicionarAluno("Bello", 123L, 5.0);
-        listaAluno.adicionarAluno("Sandy", 124L, 10.0);
-        listaAluno.adicionarAluno("Lara", 125L, 7.0);
+        listaAluno.adicionarAluno("bSandy", 124L, 10.0);
+        listaAluno.adicionarAluno("cLara", 125L, 7.0);
         //listaAluno.exibirAlunos();
         //listaAluno.removerAluno(124L);
-        listaAluno.exibirAlunosPorNome();
+        //System.out.println(listaAluno.exibirAlunosPorNota());
+        System.out.println(listaAluno.exibirAlunosPorNome());
     }
 
-    /*@Override
-    public int compareTo(Object a) {
-        a.
-    }*/
+    @Override
+    public int compareTo(Object o) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    }
     
 }
