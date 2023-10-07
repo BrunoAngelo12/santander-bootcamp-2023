@@ -72,4 +72,8 @@ public class ListaTarefas {
         }
     }
 
+    public void limparListaTarefas(){
+        setTarefas.removeAll(setTarefas);
+    }
+
 }

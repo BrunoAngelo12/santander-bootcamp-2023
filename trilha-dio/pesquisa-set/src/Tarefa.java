@@ -68,7 +68,9 @@ public class Tarefa {
         System.out.println(sTarefas.obterTarefasPendentes());*/
         sTarefas.marcarTarefaConcluida("teste");
         sTarefas.exibirTarefas();
-        sTarefas.marcarTarefaPendente("teste");
+        sTarefas.marcarTarefaPendente("teste 2");
+        sTarefas.exibirTarefas();
+        sTarefas.limparListaTarefas();
         sTarefas.exibirTarefas();
     }
 
