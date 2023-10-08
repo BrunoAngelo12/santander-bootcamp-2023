@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ContagemPalavras {
@@ -22,7 +23,7 @@ public class ContagemPalavras {
         System.out.println(contagemPalavras);
     }
 
-    public Integer encontrarPalavraMaisFrequente(){
+    /*public Integer encontrarPalavraMaisFrequente(){
         Integer palavraMaisFrequente = null;
         Integer contagem = Integer.MIN_VALUE;
         if(!contagemPalavras.isEmpty()){
@@ -33,6 +34,19 @@ public class ContagemPalavras {
             }
         }
         return palavraMaisFrequente;
+    }*/
+
+    public void encontrarPalavraMaisFrequente(){
+        Map<String, Integer> palavraMaisFrequente = new LinkedHashMap<>();
+        Integer contagem = Integer.MIN_VALUE;
+        if(!contagemPalavras.isEmpty()){
+            for(var x : contagemPalavras.entrySet()){
+                if(x.getValue() >= contagem){
+                    palavraMaisFrequente.put(x.getKey(), x.getValue());
+                }
+            }
+            System.out.println(palavraMaisFrequente);
+        }
     }
 
     public Map<String, Integer> getContagemPalavras() {
@@ -47,10 +61,10 @@ public class ContagemPalavras {
         colecao.adicionarPalavra("Palavra 4", 123);
         colecao.adicionarPalavra("Palavra 5", 431);
         colecao.adicionarPalavra("Palavra 6", 987);
-        colecao.exibirContagemPalavras();
+        /*colecao.exibirContagemPalavras();
         colecao.removerPalavra("Palavra 4");
-        colecao.exibirContagemPalavras();
-        System.out.println(colecao.encontrarPalavraMaisFrequente());
+        colecao.exibirContagemPalavras();*/
+        colecao.encontrarPalavraMaisFrequente();
     }
     
 
