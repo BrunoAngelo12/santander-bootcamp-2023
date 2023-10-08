@@ -4,7 +4,7 @@ public class Desafio1 {
         Lista lista = new Lista();
         System.out.println("Lista original: " + lista.toString());
         System.out.println();
-        System.out.println("Lista na ordem numérica: " + lista.ordemNumerica());
+        System.out.println("Lista na ordem numérica: " + lista.ordenarListaDeFormaCrescente());
     }
 
 }
